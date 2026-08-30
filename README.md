@@ -1,6 +1,12 @@
 	# Self-Hosting Frappe Press on AWS Free Tier with DuckDNS
 ### A field guide from a real installation — every problem we hit, and how we fixed it
 
+
+
+> 📘 **New here?** Start with the full beginner-friendly walkthrough: [GUIDE.md](./GUIDE.md)
+
+
+
 This guide documents a complete, real-world installation of [Frappe Press](https://github.com/frappe/press) (self-hosted Frappe Cloud) on 4 AWS EC2 instances, using **DuckDNS** instead of a paid domain + Route 53, on the **AWS Free Tier**. It is based on the official community guide:
 
 > [\[Guide\] Installing Press and get it up and running - Part 1](https://discuss.frappe.io/t/guide-installing-press-and-get-it-up-and-running-part-1/152576)
