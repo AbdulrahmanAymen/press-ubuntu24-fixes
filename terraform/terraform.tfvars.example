@@ -1,0 +1,17 @@
+# Copy this file to terraform.tfvars and fill in your real values.
+# terraform.tfvars is where your actual settings live — keep it out of git
+# if it ever contains anything sensitive (it doesn't by default here, but
+# your admin_ssh_cidr reveals your home/office IP, which is minor but still
+# worth keeping private).
+
+aws_region     = "us-east-1"
+key_pair_name  = "key_test_erp"      # must already exist in AWS (Key Pairs console)
+instance_type  = "t3.medium"
+project_name   = "presstest"
+
+# Find your current public IP with: curl ifconfig.me
+# Then use it as X.X.X.X/32 (the /32 means "just this one address")
+admin_ssh_cidr = "YOUR_IP_HERE/32"
+
+root_volume_size_gb = 30
+f1_volume_size_gb   = 50
