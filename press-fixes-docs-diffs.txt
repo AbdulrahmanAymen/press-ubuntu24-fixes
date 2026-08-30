@@ -1,0 +1,53 @@
+=== runner.py ===
+11a12
+> from ansible.plugins.loader import init_plugin_loader
+37a39,40
+> init_plugin_loader()
+> 
+
+=== mariadb main.yml (original vs current) ===
+1,10d0
+< - name: Add MariaDB Repository Key
+<   apt_key:
+<     url: https://mariadb.org/mariadb_release_signing_key.pgp
+<     state: present
+< 
+< - name: Add MariaDB Repository
+<   apt_repository:
+<     repo: deb https://mirror.rackspace.com/mariadb/repo/10.6/ubuntu {{ ansible_distribution_release }} main
+<     state: present
+<     update_cache: true
+25c15
+<       - libmariadbclient18
+---
+>       - libmariadb3
+66a57,64
+> 
+> - name: Create MariaDB systemd override directory
+>   file:
+>     path: /etc/systemd/system/mariadb.service.d
+>     state: directory
+>     owner: root
+>     group: root
+>     mode: '0755'
+
+=== mariadb main.yml (after-repo-fix vs current) ===
+57a58,65
+> - name: Create MariaDB systemd override directory
+>   file:
+>     path: /etc/systemd/system/mariadb.service.d
+>     state: directory
+>     owner: root
+>     group: root
+>     mode: '0755'
+> 
+
+=== pyproject.toml ===
+25c25
+<     "ansible==3.4.0",
+---
+>     "ansible>=9,<12",
+47c47
+<     "stripe~=2.56.0",
+---
+>     "stripe>=7,<8",
