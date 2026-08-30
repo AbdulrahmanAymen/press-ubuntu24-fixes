@@ -1,6 +1,6 @@
 	# Self-Hosting Frappe Press on AWS Free Tier with DuckDNS
 ### A field guide from a real installation — every problem we hit, and how we fixed it
-
+#
 
 
 > 📘 **New here?** Start with the full beginner-friendly walkthrough: [GUIDE.md](./GUIDE.md)
