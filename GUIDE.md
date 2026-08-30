@@ -1,6 +1,6 @@
 # Self-Hosting Frappe Press (Your Own Frappe Cloud) — Complete Beginner's Guide
 ### Ubuntu 24.04 + AWS Free Tier + DuckDNS (no paid domain needed)
-
+##
 This guide walks a complete beginner through building your own private "Frappe Cloud" — a platform where you (or your users) can spin up Frappe/ERPNext sites with one click, just like frappecloud.com.
 
 It merges three sources into one working path:
